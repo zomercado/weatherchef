@@ -1,1 +1,218 @@
+* {
+    font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --red:#ee362a;
+    --yellow: #fbf2bd;
+}
 
+
+body {
+    /* Set the background color for the whole page */
+    background-color: white; /* Set the background color for the whole page */
+}
+
+
+header {
+    padding: 20px;
+    background-color: var(--red);
+    color: var(--yellow);
+    text-align: center;
+    padding-top: 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+.top-line {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 80px;
+}
+#menu {
+    display: flex;
+    list-style-type: none;
+  gap: 20px;
+}
+
+#menu li {
+    padding: 10px;
+    list-style-type: none;
+}
+        
+#menu a {
+    text-decoration: none; /* Remove underline from links */
+    color: var(--yellow); /* Set the text color for links */
+    font-size: 16px; /* Adjust the font size for links */
+    padding-bottom: 8px; /* Set the space between text and underline */
+    border-bottom: 2px solid transparent; /* Set the initial transparent underline */
+    transition: border-bottom 0.3s ease; /* Add transition for a smooth effect */
+}
+
+#menu a:hover {
+    border-bottom: 2px solid var(--yellow); /* Change to a solid underline on hover */
+}
+
+#hook {
+    font-size: 50px;
+    text-transform: capitalize;
+    max-width: 900px;
+    text-align: center;
+    margin: 20px auto; /* Center the heading and add margin for spacing */
+    font-weight: 70;
+}
+
+.weather-simulation {
+    background-color: var(--yellow);
+    padding: 200px;
+    color: var(--red);
+    text-align: center;
+    padding-top: 80px;
+}
+
+.weather-simulation .question{
+    font-size: 30px;
+    color:  #333; 
+}
+
+.weather-buttons {
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    padding: 80px;
+    align-items: center;
+}
+
+/* styling for all buttons */
+.weather-buttons button{
+  color: black;
+  padding: 20px 42px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.weather-buttons button:hover{
+  transform: scale(1.1);
+  }
+
+.weather-buttons button .emoji {
+    font-size: 80px; /* size for the emoji*/
+}
+
+.weather-buttons button .weather-text {
+    text-transform: uppercase; /* size for the emoji*/
+    font-weight: 100;
+}
+
+.weather-option.hot button {
+    background-color: #FF6347; /* Hot - Tomato */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.weather-option.cold button {
+    background-color: #87CEEB; /* Cold - Sky Blue */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.weather-option.rainy button {
+    background-color: #D3D3D3; /* Rainy - Steel Blue */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* for the about.html */
+
+main {
+    background-color: var(--yellow);
+    padding: 40px;
+    text-align: center;
+}
+
+#main-content {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    justify-content: center;
+    gap: 10px;
+}
+
+.about-section {
+    margin-bottom: 80px;
+    text-align: left;
+}
+
+.about-title {
+    color: var(--red);
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-description,
+.about-description2,
+.extra-info {
+    font-size: 18px;
+    line-height: 1.6;
+    color: black;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 0.5px;
+    max-width: 800px;
+    margin: 0 auto; /* Center the paragraphs */
+}
+
+.extra-info {
+    font-style: italic;
+    font-size: 14px;
+    color: #333;
+}
+
+.paragraphs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* footer */
+
+footer {
+    background-color: var(--red);
+    padding: 40px 300px;
+    font-size: 12px;
+    font-weight: 100;
+    color: var(--yellow);
+}
+
+.divider {
+    border: 1px solid var(--yellow);
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+/* viewRecipeButton */
+
+.view-recipe-button {
+    background-color: var(--red);
+    color: var(--yellow);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

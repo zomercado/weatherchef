@@ -12,31 +12,59 @@
 <body>
 
     <header>
-        <h1> WeatherChef</h1>
-        <nav id="navigation">
-            <ul id="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-            </ul>
-        </nav>
-        <p>Your personalized recipe recommendations based on the weather!</p>
+        <div class="top-line">
+            <h1> WeatherChef</h1>
+            <nav>
+                <ul id="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p id="hook">Your personalized recipe recommendations based on the weather</p>
     </header>
     <main>
         <!-- Dynamic content, recipe suggestions, and weather information will go here -->
         <section class="weather-simulation">
             <div id="input">
                 <h2 class="question">What is the weather currently like in your location?</h2>
+                <div class="weather-buttons">
+                    <div class="weather-option hot">
+                        <button onclick="simulateWeather('hot')">
+                            <span class="emoji">&#x1F324;</span>
+                            <span class="weather-text">Hot</span>
+                        </button>
+                    </div>
+                    <div class="weather-option cold">
+                        <button onclick="simulateWeather('cold')">
+                            <span class="emoji">&#x26C4;</span>
+                            <span class="weather-text">Cold</span>
+                        </button>
+                    </div>
+                    <div class="weather-option rainy">
+                        <button onclick="simulateWeather('rainy')">
+                            <span class="emoji">&#x2614;</span>
+                            <span class="weather-text">Rainy</span>
+                        </button>
+                    </div>
+                </div>
             </div>
-
+            <div id="output">
+                <div class="recipe-card">
+                    <h3 class="recipe-title">Recipe Title</h3>
+                    <p class="recipe-description">Recipe Description...</p>
+                  </div>
+            </div>
         </section>
     </main>
 
     <footer>
+        <hr class="divider">
         <p>&copy; 2023 WeatherChef. All rights reserved.</p>
     </footer>
 
     <!-- JavaScript links or scripts here -->
-
+    <script src="script.js"></script>
 </body>
 
 </html>

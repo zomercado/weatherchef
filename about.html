@@ -11,41 +11,52 @@
 
 <body>
     <header>
-        <h1>About WeatherChef</h1>
+        <div class="top-line">
+            <h1> WeatherChef</h1>
+            <nav>
+                <ul id="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p id="hook">About WeatherChef</p>
     </header>
 
-    <main>
-        <section>
-            <h2>Our Mission</h2>
-            <p>At WeatherChef, we believe that the perfect recipe can be enhanced by the perfect weather. Our mission is
-                to provide you with personalized recipe recommendations that match your current weather conditions.</p>
-            <p id="description">"WeatherChef" is a web platform that combines real-time weather data with recipe
-                suggestions based on the current weather conditions. Users can input their location, and the website
-                will provide them with weather information alongside recipe recommendations that complement the weather.
-                For example, on a cold and rainy day, the platform might suggest cozy soup recipes, while on a hot and
-                sunny day, it could recommend refreshing salads or barbecue recipes.</p>
+    <main id="main-content">
+        <section class="about-section">
+            <h2 class="about-title">Our Mission</h2>
+            <div class="paragraphs">
+                <p class="about-description">At WeatherChef, we believe that the perfect recipe can be enhanced by the perfect weather. Our
+                    mission is to provide you with personalized recipe recommendations that match your current weather conditions.</p>
+                <p class="extra-info">For example, on a cold and rainy day, the platform might suggest cozy soup recipes, while on a hot and
+                    sunny day, it could recommend refreshing salads or barbecue recipes. </p>
+            </div>
         </section>
 
-        <section>
-            <h2>How It Works</h2>
-            <p>Simply enter your location, and we'll fetch the current weather for you. Based on the weather, we'll
+        <section class="about-section">
+            <h2 class="about-title">How It Works</h2>
+            <p class="about-description">Simply enter your location, and we'll fetch the current weather for you. Based on the weather, we'll
                 suggest delightful recipes for you to try. It's a unique culinary experience tailored to your
-                surroundings.</p>
+                surroundings!</p>
         </section>
 
-        <section>
-            <h2>Technology</h2>
-            <p id="implementation">We use the Spoonacular API to fetch recipes based on predefined "weather" conditions
-                or user preferences.</p>
-            <p>The website has been built using HTML,CSS,Javascript and DOM and Ajax calls</p>
+        <section class="about-section">
+            <h2 class="about-title">Technology</h2>
+            <div class="paragraphs">
+                <p class="about-description">This site was built with HTML, CSS, JS and uses the Spoonacular API to fetch recipes based on predefined "weather" conditions from user input.</p>
+
+            </div>
         </section>
     </main>
 
     <footer>
+        <hr class="divider">
         <p>&copy; 2023 WeatherChef. All rights reserved.</p>
     </footer>
 
-    <!-- Add your JavaScript links or scripts here -->
+    <!-- JavaScript links or scripts here -->
+    <script src="script.js"></script>
 </body>
 
 </html>
