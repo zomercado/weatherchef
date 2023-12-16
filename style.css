@@ -4,15 +4,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 :root {
-    --red:#ee362a;
+    --red: #ee362a;
     --yellow: #fbf2bd;
 }
 
 
 body {
     /* Set the background color for the whole page */
-    background-color: white; /* Set the background color for the whole page */
+    background-color: white;
+    /* Set the background color for the whole page */
 }
 
 
@@ -34,28 +36,36 @@ nav {
     justify-content: space-evenly;
     padding-bottom: 80px;
 }
+
 #menu {
     display: flex;
     list-style-type: none;
-  gap: 20px;
+    gap: 20px;
 }
 
 #menu li {
     padding: 10px;
     list-style-type: none;
 }
-        
+
 #menu a {
-    text-decoration: none; /* Remove underline from links */
-    color: var(--yellow); /* Set the text color for links */
-    font-size: 16px; /* Adjust the font size for links */
-    padding-bottom: 8px; /* Set the space between text and underline */
-    border-bottom: 2px solid transparent; /* Set the initial transparent underline */
-    transition: border-bottom 0.3s ease; /* Add transition for a smooth effect */
+    text-decoration: none;
+    /* Remove underline from links */
+    color: var(--yellow);
+    /* Set the text color for links */
+    font-size: 16px;
+    /* Adjust the font size for links */
+    padding-bottom: 8px;
+    /* Set the space between text and underline */
+    border-bottom: 2px solid transparent;
+    /* Set the initial transparent underline */
+    transition: border-bottom 0.3s ease;
+    /* Add transition for a smooth effect */
 }
 
 #menu a:hover {
-    border-bottom: 2px solid var(--yellow); /* Change to a solid underline on hover */
+    border-bottom: 2px solid var(--yellow);
+    /* Change to a solid underline on hover */
 }
 
 #hook {
@@ -63,21 +73,22 @@ nav {
     text-transform: capitalize;
     max-width: 900px;
     text-align: center;
-    margin: 20px auto; /* Center the heading and add margin for spacing */
+    margin: 20px auto;
+    /* Center the heading and add margin for spacing */
     font-weight: 70;
 }
 
 .weather-simulation {
-    background-color: var(--yellow);
     padding: 200px;
     color: var(--red);
     text-align: center;
     padding-top: 80px;
+    width: 100%;
 }
 
-.weather-simulation .question{
+.weather-simulation .question {
     font-size: 30px;
-    color:  #333; 
+    color: #333;
 }
 
 .weather-buttons {
@@ -89,32 +100,35 @@ nav {
 }
 
 /* styling for all buttons */
-.weather-buttons button{
-  color: black;
-  padding: 20px 42px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 25px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+.weather-buttons button {
+    color: black;
+    padding: 20px 42px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-.weather-buttons button:hover{
-  transform: scale(1.1);
-  }
+.weather-buttons button:hover {
+    transform: scale(1.1);
+}
 
 .weather-buttons button .emoji {
-    font-size: 80px; /* size for the emoji*/
+    font-size: 80px;
+    /* size for the emoji*/
 }
 
 .weather-buttons button .weather-text {
-    text-transform: uppercase; /* size for the emoji*/
+    text-transform: uppercase;
+    /* size for the emoji*/
     font-weight: 100;
 }
 
 .weather-option.hot button {
-    background-color: #FF6347; /* Hot - Tomato */
+    background-color: #FF6347;
+    /* Hot - Tomato */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -122,7 +136,8 @@ nav {
 }
 
 .weather-option.cold button {
-    background-color: #87CEEB; /* Cold - Sky Blue */
+    background-color: #87CEEB;
+    /* Cold - Sky Blue */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -130,7 +145,8 @@ nav {
 }
 
 .weather-option.rainy button {
-    background-color: #D3D3D3; /* Rainy - Steel Blue */
+    background-color: #D3D3D3;
+    /* Rainy - Steel Blue */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -138,10 +154,11 @@ nav {
 }
 
 
+
 /* for the about.html */
 
 main {
-    background-color: var(--yellow);
+    background-color: #EEEEEE;
     padding: 40px;
     text-align: center;
 }
@@ -174,7 +191,8 @@ main {
     font-family: 'Arial', sans-serif;
     letter-spacing: 0.5px;
     max-width: 800px;
-    margin: 0 auto; /* Center the paragraphs */
+    margin: 0 auto;
+    /* Center the paragraphs */
 }
 
 .extra-info {
@@ -206,13 +224,200 @@ footer {
     margin-bottom: 30px;
 }
 
-/* viewRecipeButton */
+/* output*/
+
+
+.gallery {
+    padding-top: 80px;
+    box-sizing: border-box;
+    /* Include padding and border in the total width and height */
+}
+
+.recipe-description {
+    font-size: 50px;
+    text-transform: capitalize;
+    color: black;
+    max-width: 900px;
+    text-align: center;
+    margin: 20px auto;
+    /* Center the heading and add margin for spacing */
+    font-weight: 70;
+}
+
+.second-divider {
+    border: 0.8px solid black;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 80px;
+}
+
+#output {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    display: none; /* Hide the recipe card container initially */
+
+}
+
+.recipe-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    padding-bottom: 20px;
+}
+
+.recipe-card:hover {
+    border: 2px solid var(--red);
+    transform: scale(1.1);
+  }
+
+.recipe-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.recipe-name {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    color: black;
+}
 
 .view-recipe-button {
-    background-color: var(--red);
-    color: var(--yellow);
+    background-color: white;
+    color: black;
+    border: 1px solid var(--grey);
     padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-top: auto;
+    /* Ensure the button sticks to the bottom */
+}
+
+.view-recipe-button:hover {
+    background-color: var(--yellow);
+    border: 1px solid black;
+}
+
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh; /* Set the height to the full viewport height */
+  }
+  
+.loader {
+    border-top: 16px solid var(--yellow);
+    border-right: 16px solid green;
+    border-bottom: 16px solid var(--red);
+    text-align: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+/* media queries */
+
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+        /* Adjust padding for smaller screens */
+        padding-top: 30px;
+        /* Adjust top padding for smaller screens */
+    }
+
+    .top-line {
+        flex-direction: column;
+        /* Stack items in a column for smaller screens */
+        align-items: center;
+        /* Center items for smaller screens */
+        padding-bottom: 40px;
+        /* Adjust bottom padding for smaller screens */
+    }
+
+    #menu {
+        gap: 10px;
+        /* Adjust gap between menu items for smaller screens */
+    }
+
+    #hook {
+        font-size: 30px;
+        /* Adjust font size for smaller screens */
+        margin-top: 10px;
+        /* Adjust top margin for smaller screens */
+    }
+
+    .weather-buttons {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .weather-buttons button {
+        width: 100%;
+        /* Make buttons take the full width on small screens */
+        margin-bottom: 10px;
+    }
+
+    .weather-simulation {
+        padding: 30px;
+        /* Adjust padding for smaller screens */
+    }
+
+    .weather-simulation .question {
+        font-size: 30px;
+        /* Adjust font size for smaller screens */
+    }
+
+    .gallery {
+        padding-top: 80px;
+        box-sizing: border-box;
+        /* Include padding and border in the total width and height */
+    }
+
+    #output {
+        gap: 10px;
+    }
+
+    .recipe-card {
+        font-size: 14px;
+    }
+
+    .recipe-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recipe-description {
+        font-size: 24px;
+        /* Adjust font size for smaller screens */
+    }
+
+    .second-divider {
+        border: 1px solid black;
+        width: 100%;
+        margin-top: 0px;
+        margin-bottom: 15px;
+        /* Adjust margin for smaller screens */
+    }
+
+    footer {
+        padding: 40px 20px;
+        /* Adjust padding for even smaller screens if needed */
+        text-align: center;
+    }
+
 }
