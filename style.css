@@ -14,7 +14,6 @@
 body {
     /* Set the background color for the whole page */
     background-color: white;
-    /* Set the background color for the whole page */
 }
 
 
@@ -52,15 +51,12 @@ nav {
     text-decoration: none;
     /* Remove underline from links */
     color: var(--yellow);
-    /* Set the text color for links */
     font-size: 16px;
-    /* Adjust the font size for links */
     padding-bottom: 8px;
     /* Set the space between text and underline */
     border-bottom: 2px solid transparent;
     /* Set the initial transparent underline */
     transition: border-bottom 0.3s ease;
-    /* Add transition for a smooth effect */
 }
 
 #menu a:hover {
@@ -122,7 +118,6 @@ nav {
 
 .weather-buttons button .weather-text {
     text-transform: uppercase;
-    /* size for the emoji*/
     font-weight: 100;
 }
 
@@ -255,7 +250,8 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 30px;
-    display: none; /* Hide the recipe card container initially */
+    display: none;
+    /* Hide the recipe card container initially */
 
 }
 
@@ -275,7 +271,7 @@ footer {
 .recipe-card:hover {
     border: 2px solid var(--red);
     transform: scale(1.1);
-  }
+}
 
 .recipe-card img {
     max-width: 100%;
@@ -310,9 +306,10 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30vh; /* Set the height to the full viewport height */
-  }
-  
+    height: 30vh;
+    /* Set the height to the full viewport height */
+}
+
 .loader {
     border-top: 16px solid var(--yellow);
     border-right: 16px solid green;
@@ -323,42 +320,41 @@ footer {
     width: 120px;
     height: 120px;
     animation: spin 2s linear infinite;
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 /* media queries */
 
 @media only screen and (max-width: 768px) {
     header {
         padding: 10px;
-        /* Adjust padding for smaller screens */
         padding-top: 30px;
-        /* Adjust top padding for smaller screens */
     }
 
     .top-line {
         flex-direction: column;
-        /* Stack items in a column for smaller screens */
+        /* Stack items in a column*/
         align-items: center;
-        /* Center items for smaller screens */
         padding-bottom: 40px;
-        /* Adjust bottom padding for smaller screens */
     }
 
     #menu {
         gap: 10px;
-        /* Adjust gap between menu items for smaller screens */
+        /* Adjust gap between menu items*/
     }
 
     #hook {
         font-size: 30px;
-        /* Adjust font size for smaller screens */
         margin-top: 10px;
-        /* Adjust top margin for smaller screens */
     }
 
     .weather-buttons {
@@ -374,12 +370,10 @@ footer {
 
     .weather-simulation {
         padding: 30px;
-        /* Adjust padding for smaller screens */
     }
 
     .weather-simulation .question {
         font-size: 30px;
-        /* Adjust font size for smaller screens */
     }
 
     .gallery {
@@ -403,7 +397,6 @@ footer {
 
     .recipe-description {
         font-size: 24px;
-        /* Adjust font size for smaller screens */
     }
 
     .second-divider {
@@ -411,12 +404,10 @@ footer {
         width: 100%;
         margin-top: 0px;
         margin-bottom: 15px;
-        /* Adjust margin for smaller screens */
     }
 
     footer {
         padding: 40px 20px;
-        /* Adjust padding for even smaller screens if needed */
         text-align: center;
     }
 

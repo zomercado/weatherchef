@@ -1,10 +1,10 @@
 //function to hide the loader button
 
-function hideLoaderContainer (){
-    const loaderContainer = document.querySelector('.loader-container');
-    if (loaderContainer){
-        loaderContainer.style.display = 'none';
-    }
+function hideLoaderContainer() {
+  const loaderContainer = document.querySelector(".loader-container");
+  if (loaderContainer) {
+    loaderContainer.style.display = "none";
+  }
 }
 
 function simulateWeather(weatherType) {
@@ -17,7 +17,7 @@ function simulateWeather(weatherType) {
   // Show the recipe card container
   const recipeContainer = document.getElementById("output");
   recipeContainer.style.display = "grid";
-  
+
   // Perform actions based on the selected weather type
   switch (weatherType) {
     case "hot":
@@ -33,9 +33,7 @@ function simulateWeather(weatherType) {
       fetchAndDisplayRecipes("rainy");
       break;
   }
- 
 }
-
 
 // AJAXcall to make a request to the Spoonacular recipe API
 function fetchAndDisplayRecipes(weatherType) {
@@ -101,85 +99,83 @@ function fetchRecipeUrl(recipeId) {
 }
 
 function displayRecipes(recipes) {
-    // Update the DOM to display the fetched recipes in the output container
-    const recipeContainer = document.getElementById("output");
-  
-    // Clear previous recipes
-    recipeContainer.innerHTML = "";
-  
-    // Loop through the recipes and create elements for each
-    recipes.results.forEach((recipe) => {
-      console.log("Recipe Object:", recipe);
-  
-      // Check if essential data is available
-      if (recipe.title && recipe.image) {
-        const recipeCard = document.createElement("div");
-        recipeCard.classList.add("recipe-card");
-  
-        // Image for the recipe
-        const recipeImage = document.createElement("img");
-        recipeImage.src = recipe.image;
-        recipeImage.alt = recipe.title; // Set 'alt' attribute for accessibility
-        recipeCard.appendChild(recipeImage);
-  
-        const recipeTitle = document.createElement("h3");
-        recipeTitle.textContent = recipe.title;
-        recipeTitle.classList.add("recipe-name");
-        recipeCard.appendChild(recipeTitle);
-  
-        // Fetch the recipe URL using the recipe ID
-        fetchRecipeUrl(recipe.id).then((url) => {
-          if (url) {
-            const viewRecipeButton = document.createElement("button");
-            viewRecipeButton.textContent = "View Recipe";
-            viewRecipeButton.classList.add("view-recipe-button");
-            viewRecipeButton.addEventListener("click", () => {
-              window.open(url, "_blank");
-            });
-            recipeCard.appendChild(viewRecipeButton);
-          } else {
-            console.error("Recipe URL not available.");
-          }
-        });
-  
-        // Add the recipe card to the container
-        recipeContainer.appendChild(recipeCard);
-      } else {
-        console.error("Invalid recipe data:", recipe);
-      }
-    });
-  
-    // Log fetched recipes
-    console.log("Fetched recipes:", recipes);
-  }
+  // Update the DOM to display the fetched recipes in the output container
+  const recipeContainer = document.getElementById("output");
 
+  // Clear previous recipes
+  recipeContainer.innerHTML = "";
+
+  // Loop through the recipes and create elements for each
+  recipes.results.forEach((recipe) => {
+    console.log("Recipe Object:", recipe);
+
+    // Check if essential data is available
+    if (recipe.title && recipe.image) {
+      const recipeCard = document.createElement("div");
+      recipeCard.classList.add("recipe-card");
+
+      // Image for the recipe
+      const recipeImage = document.createElement("img");
+      recipeImage.src = recipe.image;
+      recipeImage.alt = recipe.title; // Set 'alt' attribute for accessibility
+      recipeCard.appendChild(recipeImage);
+
+      const recipeTitle = document.createElement("h3");
+      recipeTitle.textContent = recipe.title;
+      recipeTitle.classList.add("recipe-name");
+      recipeCard.appendChild(recipeTitle);
+
+      // Fetch the recipe URL using the recipe ID
+      fetchRecipeUrl(recipe.id).then((url) => {
+        if (url) {
+          const viewRecipeButton = document.createElement("button");
+          viewRecipeButton.textContent = "View Recipe";
+          viewRecipeButton.classList.add("view-recipe-button");
+          viewRecipeButton.addEventListener("click", () => {
+            window.open(url, "_blank");
+          });
+          recipeCard.appendChild(viewRecipeButton);
+        } else {
+          console.error("Recipe URL not available.");
+        }
+      });
+
+      // Add the recipe card to the container
+      recipeContainer.appendChild(recipeCard);
+    } else {
+      console.error("Invalid recipe data:", recipe);
+    }
+  });
+
+  // Log fetched recipes
+  console.log("Fetched recipes:", recipes);
+}
 
 // Function to add border and scale effect on hover for recipe cards
 function addHoverEffectsToRecipeCards() {
-    // Use event delegation on a parent element that is present in the DOM
-    const recipeContainer = document.getElementById('output');
+  // Use event delegation on a parent element that is present in the DOM
+  const recipeContainer = document.getElementById("output");
 
-    // Check if the container is found
-    if (recipeContainer) {
-        // Add event listener to the container
-        recipeContainer.addEventListener('mouseenter', function (event) {
-            const card = event.target.closest('.recipe-card');
-            if (card) {
-                card.style.border = '2px solid #FF6347'; // Change border color to a red shade
-                card.style.transform = 'scale(1.2)'; // Enlarge the recipe card
-            }
-        });
+  // Check if the container is found
+  if (recipeContainer) {
+    // Add event listener to the container
+    recipeContainer.addEventListener("mouseenter", function (event) {
+      const card = event.target.closest(".recipe-card");
+      if (card) {
+        card.style.border = "2px solid #FF6347"; // Change border color to a red shade
+        card.style.transform = "scale(1.2)"; // Enlarge the recipe card
+      }
+    });
 
-        recipeContainer.addEventListener('mouseleave', function (event) {
-            const card = event.target.closest('.recipe-card');
-            if (card) {
-                card.style.border = 'none'; // Reset border on mouse leave
-                card.style.transform = 'scale(1)'; // Return to the original size
-            }
-        });
-    }
+    recipeContainer.addEventListener("mouseleave", function (event) {
+      const card = event.target.closest(".recipe-card");
+      if (card) {
+        card.style.border = "none"; // Reset border on mouse leave
+        card.style.transform = "scale(1)"; // Return to the original size
+      }
+    });
+  }
 }
 
 // Call the function to add hover effects to recipe cards
 addHoverEffectsToRecipeCards();
-
